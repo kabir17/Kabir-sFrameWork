@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="FB" parallel="none">
+
+    <test name="Test FB">
+        <parameter name="browser_name" value="chrome"/>
+        <parameter name="operating_system" value="windows"/>
+        <parameter name="URL" value="https://www.facebook.com"/>
+
+        <classes>
+            <class name="home.TestFacebook"/>
+        </classes>
+    </test>
+
+</suite>
