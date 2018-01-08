@@ -1,11 +1,9 @@
 package base;
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -16,22 +14,43 @@ public class CommonAPI {
 
 
     //runs before each test method
-    @Parameters({"url"})
-    @BeforeMethod
-    public static void setUp(String url) {
-        System.setProperty("webdriver.chrome.driver", "../Generic/driver/chromedriver.exe");
-        driver = new ChromeDriver();  //Generic/driver/chromedriver.exe
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.navigate().to("https://www.facebook.com");
-        driver.manage().window().maximize();
-    }
 
+    @Parameters({"browser_name", "operating_system", "URL"})
+    @BeforeMethod
+    public void setUp(String browserName, String os, String url) {
+        getLocalDriver(browserName, os);
+        driver.get(url);
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
+
+    }
 
     //runs after each test method
     @AfterMethod
     public static void cleanUp() {
         driver.close();
     }
+
+    public WebDriver getLocalDriver(String browserName, String os) {
+        if (browserName.equalsIgnoreCase("chrome")) {
+            if (os.equalsIgnoreCase("windows")) {
+                System.setProperty("webdriver.chrome.driver", "Generic/driver/chromedriver.exe");
+                driver = new ChromeDriver();
+        } else if (browserName.equalsIgnoreCase("mac")) {
+            System.setProperty("webdriver.chrome.driver", "Generic/driver/chromedriver");
+            driver = new ChromeDriver();
+        }
+    }else if(browserName.equalsIgnoreCase("firefox")){
+        if (os.equalsIgnoreCase("windows")) {
+            System.setProperty("webdriver.gecko.driver", "/Generic/driver/geckodriver.exe");
+            driver = new FirefoxDriver();
+        }else if (os.equalsIgnoreCase("mac")){
+            System.setProperty("webdriver.gecko.driver.","Generic/driver/gecodriver");
+            driver = new FirefoxDriver();
+        }
+    }return driver;
+  }
 }
 
 

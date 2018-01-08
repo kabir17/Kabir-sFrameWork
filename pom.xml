@@ -14,7 +14,6 @@
         <module>CNN</module>
         <module>FaceBook</module>
     </modules>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -34,7 +33,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
     <build>
         <plugins>
             <plugin>
@@ -47,6 +45,4 @@
             </plugin>
         </plugins>
     </build>
-
-
 </project>

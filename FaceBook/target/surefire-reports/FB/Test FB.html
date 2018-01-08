@@ -1,22 +1,87 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2018-01-06T16:23:50Z" name="FB" finished-at="2018-01-06T16:23:50Z" duration-ms="37">
-    <groups>
-    </groups>
-    <test started-at="2018-01-06T16:23:50Z" name="Test FB" finished-at="2018-01-06T16:23:50Z" duration-ms="37">
-      <class name="home.TestFacebook">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:home.TestFacebook@36ebc363]" started-at="2018-01-06T11:23:50Z" name="setUp" finished-at="2018-01-06T11:23:50Z" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'url' is required by BeforeMethod on method setUp but has not been marked @Optional or defined
-in C:\Users\Mohammad Kabir\IdeaProjects\web-automation-framework\FaceBook\target\test-classes\fbTestRunner.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'url' is required by BeforeMethod on method setUp but has not been marked @Optional or defined
+<html>
+<head>
+<title>TestNG:  Test FB</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test FB</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Jan 06 11:23:50 EST 2018</td>
+</tr>
+<tr><td>Total time:</td><td>0 seconds (37 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='home.TestFacebook.setUp()'><b>setUp</b><br>Test class: home.TestFacebook</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;url&apos; is required by BeforeMethod on method setUp but has not been marked @Optional or defined
+in C:\Users\Mohammad Kabir\IdeaProjects\web-automation-framework\FaceBook\target\test-classes\fbTestRunner.xml
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1606304070", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1606304070'><pre>org.testng.TestNGException: 
+Parameter &apos;url&apos; is required by BeforeMethod on method setUp but has not been marked @Optional or defined
 in C:\Users\Mohammad Kabir\IdeaProjects\web-automation-framework\FaceBook\target\test-classes\fbTestRunner.xml
 	at org.testng.internal.Parameters.createParameters(Parameters.java:199)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:443)
@@ -46,22 +111,25 @@ in C:\Users\Mohammad Kabir\IdeaProjects\web-automation-framework\FaceBook\target
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334)
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testLogin()[pri:0, instance:home.TestFacebook@36ebc363]" started-at="2018-01-06T11:23:50Z" name="testLogin" finished-at="2018-01-06T11:23:50Z" duration-ms="0" status="SKIP">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'url' is required by BeforeMethod on method setUp but has not been marked @Optional or defined
-in C:\Users\Mohammad Kabir\IdeaProjects\web-automation-framework\FaceBook\target\test-classes\fbTestRunner.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'url' is required by BeforeMethod on method setUp but has not been marked @Optional or defined
+</pre></div></td>
+<td>0</td>
+<td>home.TestFacebook@36ebc363</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='home.TestFacebook.testLogin()'><b>testLogin</b><br>Test class: home.TestFacebook</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;url&apos; is required by BeforeMethod on method setUp but has not been marked @Optional or defined
+in C:\Users\Mohammad Kabir\IdeaProjects\web-automation-framework\FaceBook\target\test-classes\fbTestRunner.xml
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1146825051", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1146825051'><pre>org.testng.TestNGException: 
+Parameter &apos;url&apos; is required by BeforeMethod on method setUp but has not been marked @Optional or defined
 in C:\Users\Mohammad Kabir\IdeaProjects\web-automation-framework\FaceBook\target\test-classes\fbTestRunner.xml
 	at org.testng.internal.Parameters.createParameters(Parameters.java:199)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:443)
@@ -91,13 +159,9 @@ in C:\Users\Mohammad Kabir\IdeaProjects\web-automation-framework\FaceBook\target
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334)
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-      </class> <!-- home.TestFacebook -->
-    </test> <!-- Test FB -->
-  </suite> <!-- FB -->
-</testng-results>
+</pre></div></td>
+<td>0</td>
+<td>home.TestFacebook@36ebc363</td></tr>
+</table><p>
+</body>
+</html>
