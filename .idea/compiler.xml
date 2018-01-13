@@ -10,6 +10,7 @@
         <module name="CNN" />
         <module name="FaceBook" />
         <module name="Generic" />
+        <module name="HealthFirst" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -17,6 +18,8 @@
       <module name="CNN" target="1.8" />
       <module name="FaceBook" target="1.8" />
       <module name="Generic" target="1.8" />
+      <module name="HealthFirst" target="1.8" />
+      <module name="TripAdvisor" target="1.8" />
       <module name="web-automation-framework" target="1.8" />
     </bytecodeTargetLevel>
   </component>

@@ -2,12 +2,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="FaceBook" parallel="none">
+
     <parameter name="browser_name" value="chrome"/>
-    <parameter name="operating_system" value="windows"/>
-    <parameter name="URL" value="https://www.facebook.com/"/>
+    <parameter name="os" value="windows"/>
+    <parameter name="url" value="https://www.facebook.com/"/>
+
     <test name="Test FaceBook">
         <classes>
-            <class name="testcases.TestHomePage"/>
+            <!--<class name="testcases.TestHomePage"/>-->
+            <class name="testcases.TestLogingPageMenu"/>
+            <class name="testcases.TestDropDownMenu"/>
+            <class name="testcases.TestFBMenuExtra"/>
+            <class name="testcases.TestFBLogo"/>
+            <class name="testcases.TestBirthDayHelp"/>
         </classes>
     </test>
 </suite>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Amazon" parallel="none">
+
+    <parameter name="browser_name" value="chrome"/>
+    <parameter name="os" value="windows"/>
+    <parameter name="url" value="https://www.amazon.com/"/>
+
+    <test name="Test Amazon">
+        <classes>
+            <!--<class name="testcases.TestHomePage"/>-->
+            <!--<class name="testcases.TestHomePage"/>-->
+            <class name="testcases.TestDropDownMenu"/>
+            <!--<class name="testcases.TestFBMenuExtra"/>-->
+            <!--<class name="testcases.TestFBLogo"/>-->
+            <!--<class name="testcases.TestBirthDayHelp"/>-->
+        </classes>
+    </test>
+</suite>

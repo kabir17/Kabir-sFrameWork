@@ -13,6 +13,7 @@
         <module>Amazon</module>
         <module>CNN</module>
         <module>FaceBook</module>
+        <module>HealthFirst</module>
     </modules>
     <dependencyManagement>
         <dependencies>
@@ -31,8 +32,34 @@
                 <artifactId>testng</artifactId>
                 <version>6.11</version>
             </dependency>
+                <dependency>
+                    <groupId>org.apache.poi</groupId>
+                    <artifactId>poi</artifactId>
+                    <version>3.17</version>
+                </dependency>
+            <dependency>
+                <groupId>com.google.api-client</groupId>
+                <artifactId>google-api-client</artifactId>
+                <version>1.22.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mongodb</groupId>
+                <artifactId>mongo-java-driver</artifactId>
+                <version> 3.6.0-beta1</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>5.1.6</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aventstack</groupId>
+                <artifactId>extentreports</artifactId>
+                <version>3.1.2</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+
     <build>
         <plugins>
             <plugin>

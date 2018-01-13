@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="HealthFirst" parallel="none">
+
+    <parameter name="browser_name" value="chrome"/>
+    <parameter name="os" value="windows"/>
+    <parameter name="url" value="https://www.healthfirst.org/"/>
+
+    <test name="Test HealthFirst">
+        <classes>
+            <!--<class name="testcases.TestHomePage"/>-->
+            <class name="testcases.TestMemberLoginPage"/>
+            <class name="testcases.TestMemberSignUpPage"/>
+            <class name="testcases.TestProviderLoginPage"/>
+        </classes>
+    </test>
+</suite>
